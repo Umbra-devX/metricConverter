@@ -1,0 +1,132 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+:root{
+--bgColor: #F6F8FA;
+--headerTxtClr: #0B1220;
+--h2Clr: #185ADB;
+--inputBorderClr: #D1D9E6;
+--btnClr: #0B66FF;
+--cardBg: #FFFFFF;
+--cardShdw: rgba(11,18,32,0.06);
+--cardborderClr: #E6EDF7;
+--outputTxtClr: #071228;
+
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--bgColor);
+    font-size: 0.6em;
+    box-sizing: border-box;
+}
+.header{
+    height: 35%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0.5%;
+    text-align: center;
+    /* text-transform: uppercase; */
+}
+h1{
+    font-size: 5em;
+    font-weight: 700;
+    color: var(--headerTxtClr);
+}
+input{
+    width: 40%;
+    height: 20%;
+    text-align: center;
+    border: 1px dashed var(--inputBorderClr);
+    border-radius: 1vh;
+    padding: 1%;
+    font-size: 300%;
+}
+button{
+    width: 20%;
+    height: 15%;
+    border: 1px solid var(--btnClr);
+    border-radius: 1vh;
+}
+.converted{
+    height: 65%;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 0.7%;
+    align-items: center;
+}
+article{
+    height: 60%;
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 5%;
+    background-color: var(--cardBg);
+    border: 1px dashed var(--cardborderClr);
+    border-radius: 1vh;
+    box-shadow: 1px 0 5px var(--cardShdw);
+    padding: 0.2%;
+}
+h2{
+    font-size: 2vw;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--h2Clr);
+}
+p{
+    border: 1px solid var(--outputTxtClr);
+    color: var(--outputTxtClr);
+    padding: 1vh;
+    font-size: 2vh;
+}
+
+@media (max-width: 750px) {
+    body{
+        justify-content: space-between;
+    }
+    h1{
+        font-size: 3em;
+    }
+    input{
+        width: 100%;
+    }
+    button{
+        width: 70%;
+        height: 10%;
+        border-radius: 1vh;
+}
+    .converted{
+        /* flex-direction: column; */
+        width: 100%;
+        height: 60%;
+        align-items: center;
+        justify-content: center;
+        gap: 1%;
+    }
+    article{
+        padding: 0;
+        width: 49%;
+        height: 40%;
+        border-radius: 0.5vh;
+        /* background-color: antiquewhite; */
+    }
+    h2{
+        font-size: 1.4vh;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+}
